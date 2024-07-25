@@ -1,0 +1,192 @@
+@import './styles/variables';
+
+@font-face {
+  font-family: 'proxima-nova-regular';
+  src: url('../public/fonts/proxima-nova-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova-medium';
+  src: url('../public/fonts/proxima-nova-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova-bold';
+  src: url('../public/fonts/proxima-nova-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-nova-extrabold';
+  src: url('../public/fonts/proxima-nova-extrabold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mirador-bold';
+  src: url('../public/fonts/Mirador-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../public/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../public/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html { 
+  scroll-behavior: smooth;
+  height: 100%; 
+}
+
+body { 
+  margin: 0;
+  height: 100%;
+  font-family: 'proxima-nova-regular';
+  &.open-menu {
+    overflow: hidden;
+    //background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'proxima-nova-medium';
+  color: $color-blue1;
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: 'mirador-bold';
+  font-size: 55px;
+  color: $color-blue1;
+}
+
+h2 {
+  font-family: 'mirador-bold';
+  font-size: 40px;
+  color: $color-blue1;
+}
+
+h3 {
+  font-family: 'mirador-bold';
+  font-size: 30px;
+  color: $color-blue1;
+}
+
+h4 {
+  font-family: 'mirador-bold';
+  font-size: 25px;
+  color: $color-blue1;
+}
+
+h5 {
+  font-family: 'proxima-nova-extrabold';
+  color: $color-blue1;
+  font-size: 21px;
+}
+
+h6 {
+  font-family: 'proxima-nova-bold';
+  color: $color-blue1;
+  font-size: 21px;
+}
+
+p {
+  font-family: 'proxima-nova-regular';
+  color: $color-blue1;
+  font-size: 21px;
+  line-height: 35px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Montserrat-SemiBold';
+  font-size: 21px;
+  color: $color-white1;
+  &.btn-primary {
+    background-color: $color-green2;
+    padding: 15px 30px;
+    border-radius: 36px;
+  }
+  &.btn-secondary {
+    background-color: $color-blue1;
+    padding: 15px 30px;
+    border-radius: 36px;
+  }
+}
+
+input, textarea {
+  font-family: 'proxima-nova-regular';
+  font-size: 15px;
+}
+
+.row {
+  display: flex;
+}
+
+.col-span-xl-6 {
+  width: 50%;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  width: 768px;
+  margin: 0 auto;
+}
+
+small {
+  color: red;
+  font-size: 12px;
+  margin: 3px 10px;
+  font-family: "proxima-nova-regular";
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 18px;
+  }
+}

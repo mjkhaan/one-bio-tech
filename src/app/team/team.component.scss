@@ -1,0 +1,144 @@
+@import '../../styles/variables';
+.main-section {
+  overflow: hidden;
+  .left-container {
+    width: 57.5%;
+    padding-bottom: 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      padding: 92px 210px 24px 140px;
+    }
+    p {
+      padding: 0px 234px 0px 140px;
+    }
+  }
+  
+  .right-container {
+    width: 42.5%;
+    background-color: $color-green1;
+    position: relative;
+    padding: 60px 0px 80px 0px;
+    img {
+      position: relative;
+      left: -200px;
+      width: 670px;
+      top: -30px;
+    }
+    svg {
+      position: absolute;
+      bottom: -350px;
+      right: -198px;
+      z-index: -1;
+    }
+  }
+}
+
+.leader-section {
+    padding: 115px 140px 90px 140px;
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1680px) {
+  .main-section {
+    .left-container {
+      padding-top: 50px;
+      padding-bottom: 150px;
+    }
+    .right-container {
+      padding-top: 50px;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  .main-section {
+    .left-container {
+      width: 50%;
+    }
+    .right-container {
+      width: 50%;
+      img {
+        width: 100%;
+        left: -140px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .main-section {
+    .left-container {
+      width: 50%;
+      h1 {
+        padding: 92px 100px 24px 100px;
+      }
+      p {
+        padding: 0px 100px 0px 100px;
+      }
+    }
+    .right-container {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: calc(100% - 100px);
+        left: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-section {
+    display: block;
+    .left-container {
+      width: 100%;
+      h1 {
+        padding: 90px 100px 24px 100px;
+      }
+      p {
+        padding: 0px 100px 0px 100px;
+      }
+    }
+    .right-container {
+      width: 100%;
+      padding: 90px 0px;
+      img {
+        width: calc(100% - 200px);
+        height: auto;
+      }
+    }
+  }
+  .leader-section {
+    padding: 90px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    .left-container {
+      width: 100%;
+      padding-bottom: 60px;
+      h1 {
+        padding: 40px 60px 24px 60px;
+      }
+      p {
+        padding: 0px 60px 0px 60px;
+      }
+    }
+    .right-container {
+      img {
+        width: calc(100% - 60px);
+      }
+    }
+  }
+  .leader-section {
+    padding: 90px 60px;
+  }
+}

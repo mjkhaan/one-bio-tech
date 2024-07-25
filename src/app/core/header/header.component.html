@@ -1,0 +1,49 @@
+<header  [class.scrolled]="isScrolled">
+  <div>
+    <a href="/">
+      <img src="/images/logo.png" alt="logo">
+    </a>
+  </div>
+  <nav class="hide-lg hide-xl" [class.scrolled]="isScrolled">
+    <ul>
+      <li [ngClass]="{'active': currentRoute === '/about'}">
+        <a href="/about">About</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/services'}">
+        <a href="/services">Services</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/team'}">
+        <a href="/team">Team</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/contact'}">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="menu-button" [class.open]="isOpen" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div class="mobile-menu" [class.open]="isOpen">
+    <div class="img-wrapper">
+      <a href="/">
+        <img src="/images/logo.png" alt="logo">
+      </a>
+    </div>
+    <ul>
+      <li [ngClass]="{'active': currentRoute === '/about'}">
+        <a href="/about">About</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/services'}">
+        <a href="/services">Services</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/team'}">
+        <a href="/team">Team</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/contact'}">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</header>
