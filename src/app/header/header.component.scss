@@ -48,9 +48,12 @@ header {
         width: 108px;    
         height: 40px;
         justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 26px;
         &.active {
           border: 1px solid $color-blue1;
           border-radius: 26px;
+          transition: border-color 0.9s ease, border-radius 0.9s ease;
         }
       }
     }
