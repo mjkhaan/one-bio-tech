@@ -1,22 +1,22 @@
 <header  [class.scrolled]="isScrolled">
   <div>
-    <a href="/">
+    <a [routerLink]="['/']">
       <img src="/images/logo.png" alt="logo">
     </a>
   </div>
   <nav class="hide-lg hide-xl" [class.scrolled]="isScrolled">
     <ul>
       <li [ngClass]="{'active': currentRoute === '/about'}">
-        <a href="/about">About</a>
+        <a [routerLink]="['/about']">About</a>
       </li>
       <li [ngClass]="{'active': currentRoute === '/services'}">
-        <a href="/services">Services</a>
+        <a [routerLink]="['/services']">Services</a>
       </li>
       <li [ngClass]="{'active': currentRoute === '/team'}">
-        <a href="/team">Team</a>
+        <a [routerLink]="['/team']">Team</a>
       </li>
       <li [ngClass]="{'active': currentRoute === '/contact'}">
-        <a href="/contact">Contact</a>
+        <a [routerLink]="['/contact']">Contact</a>
       </li>
     </ul>
   </nav>
