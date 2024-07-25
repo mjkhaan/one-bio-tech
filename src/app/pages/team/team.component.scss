@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
 .main-section {
   overflow: hidden;
   .left-container {
@@ -35,52 +35,12 @@
   }
 }
 
-.consulting-section {
-  padding: 115px 140px;
-  background-color: $color-blue1;
-  h2 {
-    margin-bottom: 26px;
-    text-align: center;
-    color: $color-white1;
-  }
-  p {
-    color: $color-white1;
-  }
-}
-
-.pharmacy-section, .patnership-section {
-  padding: 115px 140px;
-  h2 {
-    margin-bottom: 26px;
-    text-align: center;
-  }
-}
-
-.clinical-section {
-  padding: 115px 140px;
-  background-color: $color-green3;
-  h2 {
-    margin-bottom: 26px;
-    text-align: center;
-  }
-}
-
-.program-section {
-  padding: 115px 140px;
-  background-color: $color-green3;
-  overflow: hidden;
-  position: relative;
-  h2 {
-    text-align: center;
-  }
-  p {
-    margin-top: 26px;
-  }
-  svg {
-    position: absolute;
-    bottom: -350px;
-    left: -238px;
-  }
+.leader-section {
+    padding: 115px 140px 90px 140px;
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
 
 @media (min-width: 1680px) {
@@ -155,15 +115,8 @@
       }
     }
   }
-  .consulting-section, .pharmacy-section, .patnership-section, .clinical-section {
+  .leader-section {
     padding: 90px 100px;
-  }
-  .program-section {
-    padding: 90px 100px;
-    svg {
-      bottom: -360px;
-      left: -298px;
-    }
   }
 }
 
@@ -185,7 +138,7 @@
       }
     }
   }
-  .consulting-section, .pharmacy-section, .patnership-section, .clinical-section, .program-section {
+  .leader-section {
     padding: 90px 60px;
   }
 }
