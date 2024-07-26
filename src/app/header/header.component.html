@@ -1,7 +1,7 @@
 <header  [class.scrolled]="isScrolled">
   <div>
     <a [routerLink]="['/']">
-      <img src="/images/logo.png" alt="logo">
+      <img src="/images/logo.png" alt="logo" loading="lazy">
     </a>
   </div>
   <nav class="hide-lg hide-xl" [class.scrolled]="isScrolled">
@@ -28,7 +28,7 @@
   <div class="mobile-menu" [class.open]="isOpen">
     <div class="img-wrapper">
       <a href="/">
-        <img src="/images/logo.png" alt="logo">
+        <img src="/images/logo.png" alt="logo" loading="lazy">
       </a>
     </div>
     <ul>
