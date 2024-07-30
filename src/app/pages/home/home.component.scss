@@ -40,12 +40,18 @@
     width: 318px;
     color: $color-white1;
     background-color: $color-blue1;
-    padding: 34px 66px;
+    padding: 32px 64px;
     border-radius: 64px;
     margin: 0 auto;
     font-family: 'proxima-nova-regular';
     margin-top: 50px;
     z-index: 1;
+    border: 2px solid $color-blue1;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: transparent;
+      color: $color-blue1;
+    }
   }
   svg {
     position: absolute;

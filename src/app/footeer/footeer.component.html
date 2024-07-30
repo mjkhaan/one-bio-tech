@@ -9,16 +9,16 @@
       <h3>Treating complex medical conditions.</h3>
       <ul>
         <li>
-          <a [routerLink]="['/about']">About</a>
+          <a [routerLink]="['/about']" [ngClass]="{'active': currentRoute === '/about'}" >About</a>
         </li>
         <li>
-          <a [routerLink]="['/services']">Services</a>
+          <a [routerLink]="['/services']" [ngClass]="{'active': currentRoute === '/services'}">Services</a>
         </li>
         <li>
-          <a [routerLink]="['/team']">Team</a>
+          <a [routerLink]="['/team']" [ngClass]="{'active': currentRoute === '/team'}">Team</a>
         </li>
         <li>
-          <a [routerLink]="['/contact']">Contact</a>
+          <a [routerLink]="['/contact']" [ngClass]="{'active': currentRoute === '/contact'}">Contact</a>
         </li>
       </ul>
     </div>

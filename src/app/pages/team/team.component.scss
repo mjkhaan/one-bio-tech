@@ -35,14 +35,6 @@
   }
 }
 
-.leader-section {
-    padding: 115px 140px 90px 140px;
-    h2 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-}
-
 @media (min-width: 1680px) {
   .main-section {
     .left-container {
@@ -115,9 +107,6 @@
       }
     }
   }
-  .leader-section {
-    padding: 90px 100px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -137,8 +126,5 @@
         width: calc(100% - 60px);
       }
     }
-  }
-  .leader-section {
-    padding: 90px 60px;
   }
 }

@@ -138,13 +138,27 @@ button {
   color: $color-white1;
   &.btn-primary {
     background-color: $color-green2;
-    padding: 15px 30px;
+    padding: 13px 28px;
     border-radius: 36px;
+    border: 2px solid $color-green2;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: transparent;
+      color: $color-green2;
+      border: 2px solid $color-green2;
+    }
   }
   &.btn-secondary {
     background-color: $color-blue1;
-    padding: 15px 30px;
+    padding: 13px 28px;
     border-radius: 36px;
+    border: 2px solid $color-blue1;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: transparent;
+      color: $color-blue1;
+      border: 2px solid $color-blue1;
+    }
   }
 }
 

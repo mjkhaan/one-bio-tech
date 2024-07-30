@@ -50,6 +50,8 @@ header {
         justify-content: center;
         border: 1px solid transparent;
         border-radius: 26px;
+        cursor: pointer;
+        &:hover,
         &.active {
           border: 1px solid $color-blue1;
           border-radius: 26px;

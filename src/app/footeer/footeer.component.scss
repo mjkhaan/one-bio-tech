@@ -21,6 +21,12 @@ footer {
         li {
           a {
             color: $color-white1;
+            border-bottom: 2px solid $color-blue1;
+            &:hover,
+            &.active {
+              border-bottom: 2px solid $color-white1;
+              transition: border-color 0.9s ease, border-radius 0.9s ease;
+            }
           }
         }
       }
