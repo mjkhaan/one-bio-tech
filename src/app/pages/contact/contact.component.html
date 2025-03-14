@@ -1,63 +1,62 @@
-<section class="row main-section">
-  <div class="left-container">
-    <h1>Get in Touch With Us</h1>
-    <div>
-      <h4>Our Location</h4>
-      <p>2020 Calamos Court, 2nd Floor</p>
-      <p>Naperville, Illinois 60563</p>
+<section class="main-section contact-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-12">
+        <img src="/appolloweb/images/contact-img.png" alt="Contact Apollo" class="mt-5">
+      </div>
+      <div class="col-6 col-md-12">
+        <div class="contact-form mt-md-5">
+          <h2 class="text-center">Contact Us</h2>
+          <p class="mb-32">Have any questions about our products or services. Drop us a note and we'll get back to you within 1-2 business days.</p>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div>
+              <label for="fullName">Full Name</label>
+              <input id="fullName" formControlName="fullName" type="text" placeholder="Full Name">
+              <div *ngIf="fullName.invalid && fullName.touched">
+                <small *ngIf="fullName.errors?.['required']">Name is required.</small>
+              </div>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" formControlName="email" type="email" placeholder="Email">
+              <div *ngIf="email.invalid && email.touched">
+                <small *ngIf="email.errors?.['required']">Email is required.</small>
+                <small *ngIf="email.errors?.['email']">Email must be valid.</small>
+              </div>
+            </div>
+            <div>
+              <label for="phoneNumber">Phone Number</label>
+              <input id="phoneNumber" formControlName="phoneNumber" type="tel" placeholder="Phone Number">
+              <div *ngIf="phoneNumber.invalid && phoneNumber.touched">
+                <small *ngIf="phoneNumber.errors?.['required']">Phone number is required.</small>
+              </div>
+            </div>
+            <div>
+              <label for="companyName">Company Name</label>
+              <input id="companyName" formControlName="companyName" placeholder="Company Name">
+              <div *ngIf="companyName.invalid && companyName.touched">
+                <small *ngIf="companyName.errors?.['required']">Company name is required.</small>
+              </div>
+            </div>
+            <div class="fullwidth">
+              <label for="jobTitle">Job Title</label>
+              <input id="jobTitle" formControlName="jobTitle" placeholder="Job Title">
+              <div *ngIf="jobTitle.invalid && jobTitle.touched">
+                <small *ngIf="jobTitle.errors?.['required']">Job title is required.</small>
+              </div>
+            </div>
+            <div class="fullwidth">
+              <label for="message">Message</label>
+              <textarea id="message" formControlName="message" placeholder="Message"></textarea>
+              <div *ngIf="message.invalid && message.touched">
+                <small *ngIf="message.errors?.['required']">Message is required.</small>
+                <!-- <small *ngIf="message.errors?.['minlength']">Message must be at least 10 characters long.</small> -->
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div>
-      <h4>Phone</h4>
-      <p>(888) 402-0202</p>
-    </div>
-    <div>
-      <h4>Email</h4>
-      <p>info&#64;uhp.org</p>
-    </div>
-  </div>
-  <div class="right-container">
-    <div class="contact-form">
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <div>
-          <input id="name" formControlName="name" placeholder="Name">
-        <div *ngIf="name.invalid && name.touched">
-          <small *ngIf="name.errors?.['required']">Name is required.</small>
-        </div>
-        </div>
-        <div>
-          <input id="email" formControlName="email" placeholder="Email">
-          <div *ngIf="email.invalid && email.touched">
-            <small *ngIf="email.errors?.['required']">Email is required.</small>
-            <small *ngIf="email.errors?.['email']">Email must be valid.</small>
-          </div>
-        </div>
-        <div>
-          <input id="subject" formControlName="subject" placeholder="Subject">
-          <div *ngIf="subject.invalid && subject.touched">
-            <small *ngIf="subject.errors?.['required']">Subject is required.</small>
-          </div>
-        </div>
-        <div>
-          <textarea id="message" formControlName="message" placeholder="Message"></textarea>
-          <div *ngIf="message.invalid && message.touched">
-            <small *ngIf="message.errors?.['required']">Message is required.</small>
-            <!-- <small *ngIf="message.errors?.['minlength']">Message must be at least 10 characters long.</small> -->
-          </div>
-        </div>
-        <button type="submit" class="btn-secondary">Submit</button>
-      </form>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Group_34" data-name="Group 34" width="486.582" height="486.582" viewBox="0 0 486.582 486.582">
-      <defs>
-        <clipPath id="clip-path">
-          <rect id="Rectangle_41" data-name="Rectangle 41" width="486.582" height="486.582" fill="none"/>
-        </clipPath>
-      </defs>
-      <g id="Group_27" data-name="Group 27" clip-path="url(#clip-path)">
-        <circle id="Ellipse_13" data-name="Ellipse 13" cx="241.022" cy="241.022" r="241.022" transform="translate(2.269 2.269)" fill="none" stroke="#003e70" stroke-linecap="round" stroke-width="2"/>
-        <circle id="Ellipse_14" data-name="Ellipse 14" cx="206.991" cy="206.991" r="206.991" transform="translate(36.3 36.3)" fill="none" stroke="#003e70" stroke-linecap="round" stroke-width="2"/>
-        <circle id="Ellipse_15" data-name="Ellipse 15" cx="172.959" cy="172.959" r="172.959" transform="translate(70.332 70.331)" fill="none" stroke="#003e70" stroke-linecap="round" stroke-width="2"/>
-      </g>
-    </svg>
   </div>
 </section>

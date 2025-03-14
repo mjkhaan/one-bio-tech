@@ -1,52 +1,81 @@
 @import './styles/variables';
 
-@font-face {
-  font-family: 'proxima-nova-regular';
-  src: url('../public/fonts/proxima-nova-regular.ttf') format('truetype');
-  font-weight: normal;
+%poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'proxima-nova-medium';
-  src: url('../public/fonts/proxima-nova-medium.ttf') format('truetype');
-  font-weight: normal;
+%poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'proxima-nova-bold';
-  src: url('../public/fonts/proxima-nova-bold.ttf') format('truetype');
-  font-weight: normal;
+%poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'proxima-nova-extrabold';
-  src: url('../public/fonts/proxima-nova-extrabold.ttf') format('truetype');
-  font-weight: normal;
+%poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'mirador-bold';
-  src: url('../public/fonts/Mirador-Bold.ttf') format('truetype');
-  font-weight: normal;
+%poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Montserrat-Medium';
-  src: url('../public/fonts/Montserrat-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+%poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url('../public/fonts/Montserrat-SemiBold.ttf') format('truetype');
-  font-weight: normal;
+%poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+%poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+%poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+%roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+%roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+%roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 html { 
@@ -57,11 +86,25 @@ html {
 body { 
   margin: 0;
   height: 100%;
-  font-family: 'proxima-nova-regular';
+  @extend %roboto-regular;
   &.open-menu {
     overflow: hidden;
-    //background: rgba(0, 0, 0, 0.4);
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  width: 100%;
+  position: relative;
 }
 
 ul {
@@ -75,9 +118,17 @@ li {
 
 a {
   text-decoration: none;
-  font-family: 'proxima-nova-medium';
-  color: $color-blue1;
+  @extend %roboto-medium;
+  color: $color-text-dark;
   font-size: 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.row-width-100 {
+  width: calc(100% + 30px);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -86,89 +137,141 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-family: 'mirador-bold';
-  font-size: 55px;
-  color: $color-blue1;
+  @extend %poppins-regular;
+  font-size: 60px;
+  line-height: 75px;
+  color: $color-white;
+  strong {
+    @extend %poppins-black;
+  }
 }
 
 h2 {
-  font-family: 'mirador-bold';
-  font-size: 40px;
-  color: $color-blue1;
+  @extend %poppins-black;
+  font-size: 42px;
+  color: $color-primary;
+  margin-bottom: 12px;
 }
 
 h3 {
-  font-family: 'mirador-bold';
-  font-size: 30px;
-  color: $color-blue1;
+  @extend %poppins-black;
+  font-size: 50px;
+  color: $color-primary;
+  margin-bottom: 36px;
 }
 
 h4 {
-  font-family: 'mirador-bold';
-  font-size: 25px;
-  color: $color-blue1;
+  @extend %poppins-regular;
+  font-size: 32px;
+  color: $color-primary;
+  margin-bottom: 8px;
 }
 
 h5 {
-  font-family: 'proxima-nova-extrabold';
-  color: $color-blue1;
-  font-size: 21px;
+  @extend %poppins-black;
+  color: $color-secondary;
+  font-size: 32px;
+  margin-bottom: 16px;
 }
 
 h6 {
   font-family: 'proxima-nova-bold';
-  color: $color-blue1;
+  color: $color-primary;
   font-size: 21px;
 }
 
 p {
-  font-family: 'proxima-nova-regular';
-  color: $color-blue1;
+  @extend %roboto-regular;
+  color: $color-text-dark;
   font-size: 21px;
-  line-height: 35px;
+  line-height: 31px;
+  margin-bottom: 24px;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
+.text-center {
+  text-align: center !important;
+}
+
+.mb-32 {
+  margin-bottom: 32px !important;
+}
+
+.btn-primary {
+  @extend %roboto-bold;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
   cursor: pointer;
-  font-family: 'Montserrat-SemiBold';
-  font-size: 21px;
-  color: $color-white1;
-  &.btn-primary {
-    background-color: $color-green2;
-    padding: 13px 28px;
-    border-radius: 36px;
-    border: 2px solid $color-green2;
-    transition: all 0.5s ease;
-    &:hover {
-      background-color: transparent;
-      color: $color-green2;
-      border: 2px solid $color-green2;
-    }
-  }
-  &.btn-secondary {
-    background-color: $color-blue1;
-    padding: 13px 28px;
-    border-radius: 36px;
-    border: 2px solid $color-blue1;
-    transition: all 0.5s ease;
-    &:hover {
-      background-color: transparent;
-      color: $color-blue1;
-      border: 2px solid $color-blue1;
-    }
-  }
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 18px;
+  border-radius: 32px;
+  color: #fff;
+  background-color: lighten($color-primary, 15%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover & Focus */
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: #fff;
+}
+
+/* Active */
+.btn-primary:active {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  transform: scale(0.98);
+}
+
+/* Disabled */
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+label {
+  @extend %roboto-medium;
+  font-size: 15px;
+  line-height: 36px;
+  color: $color-text-dark;
+  margin-bottom: 8px;
 }
 
 input, textarea {
-  font-family: 'proxima-nova-regular';
+  @extend %roboto-regular;
   font-size: 15px;
+  border-radius: 18px;
+  width: 100%;
+  padding: 14px 24px 14px 24px;
+  color: $color-text-light;
+  border: none;
 }
 
-.row {
-  display: flex;
+.input-group {
+  position: relative;
+  input {
+    width: -webkit-fill-available;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    border-radius: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 3px;
+    margin-right: 3px;
+    height: calc(100% - 6px);
+  }
 }
 
 .col-span-xl-6 {
@@ -193,14 +296,44 @@ small {
   position: absolute;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   h1 {
-    font-size: 40px;
+    font-size: 48px;
+    line-height: 56px;
   }
   h3 {
-    font-size: 26px;
+    font-size: 44px;
+    margin-bottom: 28px;
+  }
+  h5 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    line-height: 40px;
   }
   p {
     font-size: 18px;
+    line-height: 30px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  h3 {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  p,
+  .btn-primary {
+    font-size: 16px;
   }
 }

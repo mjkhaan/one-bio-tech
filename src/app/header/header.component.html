@@ -1,19 +1,13 @@
 <header  [class.scrolled]="isScrolled">
-  <div>
+  <div class="logo">
     <a [routerLink]="['/']">
-      <img src="/images/logo.png" alt="logo" loading="lazy">
+      <img src="/appolloweb/images/logo.svg" alt="Apollo Technologies" loading="lazy">
     </a>
   </div>
   <nav class="hide-lg hide-xl" [class.scrolled]="isScrolled">
     <ul>
-      <li [ngClass]="{'active': currentRoute === '/about'}">
-        <a [routerLink]="['/about']">About</a>
-      </li>
-      <li [ngClass]="{'active': currentRoute === '/services'}">
-        <a [routerLink]="['/services']">Services</a>
-      </li>
-      <li [ngClass]="{'active': currentRoute === '/team'}">
-        <a [routerLink]="['/team']">Team</a>
+      <li [ngClass]="{'active': currentRoute === '/'}">
+        <a [routerLink]="['/']">Home</a>
       </li>
       <li [ngClass]="{'active': currentRoute === '/contact'}">
         <a [routerLink]="['/contact']">Contact</a>
@@ -28,18 +22,12 @@
   <div class="mobile-menu" [class.open]="isOpen">
     <div class="img-wrapper">
       <a href="/">
-        <img src="/images/logo.png" alt="logo" loading="lazy">
+        <img src="/appolloweb/images/logo.svg" alt="logo" loading="lazy">
       </a>
     </div>
     <ul>
-      <li [ngClass]="{'active': currentRoute === '/about'}">
-        <a href="/about">About</a>
-      </li>
-      <li [ngClass]="{'active': currentRoute === '/services'}">
-        <a href="/services">Services</a>
-      </li>
-      <li [ngClass]="{'active': currentRoute === '/team'}">
-        <a href="/team">Team</a>
+      <li [ngClass]="{'active': currentRoute === '/'}">
+        <a href="/">Home</a>
       </li>
       <li [ngClass]="{'active': currentRoute === '/contact'}">
         <a href="/contact">Contact</a>

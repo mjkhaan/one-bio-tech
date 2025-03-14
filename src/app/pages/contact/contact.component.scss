@@ -1,167 +1,52 @@
 @import '../../../styles/variables';
+@import '../../../styles/grid';
 .main-section {
   overflow: hidden;
-  .left-container {
-    width: 57.5%;
-    padding-bottom: 98px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h1 {
-      padding: 92px 108px 0px 140px;
-    }
-    h4 {
-      padding: 32px 108px 18px 140px;
-    }
-    p {
-        padding: 0px 108px 0px 140px; 
-    }
-  }
-  
-  .right-container {
-    width: 42.5%;
-    background-color: $color-green1;
+  &.contact-page {
     position: relative;
-    .contact-form {
-      background-color: $color-grey3;
-      padding: 46px;
-      margin: 70px 140px 80px 90px;
-      border-radius: 22px;
-      form {
-        > div {
-          margin-bottom: 30px;
-          input, textarea {
-            width: calc(100% - 40px);
-            height: 46px;
-            border: 0.5px solid $color-blue1;
-            border-radius: 18px;
-            padding: 0px 20px;
-            outline: none;
-          }
-          textarea {
-            height: 240px;
-            padding: 20px;
-          }
-        }
-        button {
-          font-size: 18px;
-          padding: 10px 25px;
-        }
-      }
-    }
-    svg {
+    padding-top: 90px;
+    padding-bottom: 115px;
+    &::before {
+      content: '';
       position: absolute;
-      bottom: -350px;
-      right: -198px;
-      z-index: -1;
+      left: 0;
+      top: 0;
+      background: url('/appolloweb/images/contact-path.png') no-repeat;
+      width: 588px;
+      height: 290px;
     }
   }
 }
 
-@media (min-width: 1680px) {
-  .main-section {
-    .left-container {
-      padding-top: 50px;
-      padding-bottom: 150px;
-    }
-    .right-container {
-      padding-top: 50px;
-    }
-  }
+.contact-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px 16px;
 }
 
-@media (min-width: 1441px) {
-  .main-section {
-    .left-container {
-      width: 50%;
-    }
-    .right-container {
-      width: 50%;
-    }
-  }
+.contact-form div {
+  width: calc(50% - 8px); /* 50% width with gap compensation */
 }
 
-@media (max-width: 1366px) {
-  .main-section {
-    .right-container {
-      .contact-form {
-        margin: 70px 70px 80px 70px;
-      }
-    }
-  }
+.contact-form .fullwidth {
+  width: 100%;
 }
 
-@media (max-width: 1280px) {
-  .main-section {
-    .left-container {
-      width: 50%;
-      h1 {
-        padding: 92px 100px 24px 100px;
-      }
-      h4 {
-        padding: 32px 108px 18px 100px;
-      }
-      p {
-        padding: 0px 100px 0px 100px;
-      }
-    }
-    .right-container {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .contact-form {
-        margin: 70px 70px 80px 70px;
-        width: 100%;
-      }
-    }
-  }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px 22px;
+  border: 0.5px solid #170631;
+  border-radius: 9px;
 }
 
-@media (max-width: 1024px) {
-  .main-section {
-    display: block;
-    .left-container {
-      width: 100%;
-      h1 {
-        padding: 90px 100px 24px 100px;
-      }
-      h4 {
-        padding: 32px 100px 18px 100px;
-      }
-      p {
-        padding: 0px 100px 0px 100px;
-      }
-    }
-    .right-container {
-      width: 100%;
-      padding: 90px 0px;
-      .contact-form {
-        margin: 40px 70px 40px 70px;
-      }
-    }
-  }
+.contact-form textarea {
+  min-height: 120px; /* Adjust height for message box */
+  resize: vertical;
 }
 
-@media (max-width: 768px) {
-  .main-section {
-    .left-container {
-      width: 100%;
-      padding-bottom: 60px;
-      h1 {
-        padding: 40px 60px 24px 60px;
-      }
-      h4 {
-        padding: 32px 6px 18px 60px;
-      }
-      p {
-        padding: 0px 60px 0px 60px;
-      }
-    }
-    .right-container {
-      .contact-form {
-        margin: 0px 20px 0px 20px;
-      }
-    }
+@media (max-width: 576px) {
+  .contact-form div {
+    width: 100%; /* 100% width on Mobiles */
   }
 }

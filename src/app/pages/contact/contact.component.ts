@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ContactFormService } from '../../services/contact-form/contact-form.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -13,12 +15,14 @@ import { CommonModule } from '@angular/common';
 export class ContactComponent implements OnInit{
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private contactFormService: ContactFormService, private toastr: ToastrService) {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required]],
+      fullName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      subject: ['', [Validators.required]],
-      message: ['', [Validators.required]]
+      phoneNumber: [''],
+      companyName: [''],
+      jobTitle: [''],
+      message: ['']
     });
   }
 
@@ -26,8 +30,18 @@ export class ContactComponent implements OnInit{
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Form Submitted!', this.contactForm.value);
+      // console.log('Form Submitted!', this.contactForm.value);
       // You can handle the form submission here, e.g., send it to a server
+      this.contactFormService.sendContactDetails({...this.contactForm.value, productServiceInterest: []}).subscribe({
+        next: (response) => {
+          console.log('Form Submitted!', response);
+          this.toastr.success('Form has submitted successfully');
+          this.contactForm.reset();
+        },
+        error: (error) => {
+          this.toastr.error(error.message);
+        },
+      });
     } else {
       this.markFormGroupTouched(this.contactForm);
     }
@@ -42,16 +56,24 @@ export class ContactComponent implements OnInit{
     });
   }
   
-  get name() {
-    return this.contactForm.get('name')!;
+  get fullName() {
+    return this.contactForm.get('fullName')!;
   }
 
   get email() {
     return this.contactForm.get('email')!;
   }
 
-  get subject() {
-    return this.contactForm.get('subject')!;
+  get phoneNumber() {
+    return this.contactForm.get('phoneNumber')!;
+  }
+
+  get companyName() {
+    return this.contactForm.get('companyName')!;
+  }
+
+  get jobTitle() {
+    return this.contactForm.get('jobTitle')!;
   }
 
   get message() {
