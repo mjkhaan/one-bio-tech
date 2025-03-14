@@ -21,16 +21,16 @@
   </div>
   <div class="mobile-menu" [class.open]="isOpen">
     <div class="img-wrapper">
-      <a href="/">
+      <a [routerLink]="['/']">
         <img src="/appolloweb/images/logo.svg" alt="logo" loading="lazy">
       </a>
     </div>
     <ul>
       <li [ngClass]="{'active': currentRoute === '/'}">
-        <a href="/">Home</a>
+        <a [routerLink]="['/']">Home</a>
       </li>
       <li [ngClass]="{'active': currentRoute === '/contact'}">
-        <a href="/contact">Contact</a>
+        <a [routerLink]="['/contact']">Contact</a>
       </li>
     </ul>
   </div>
