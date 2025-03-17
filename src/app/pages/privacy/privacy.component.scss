@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+@import '../../../styles/grid';
+
+.privacy-page {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 115px;
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}

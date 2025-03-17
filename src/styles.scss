@@ -107,13 +107,16 @@ img {
   position: relative;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
+footer,
+header {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
 }
 
 a {
@@ -175,9 +178,10 @@ h5 {
 }
 
 h6 {
-  font-family: 'proxima-nova-bold';
-  color: $color-primary;
-  font-size: 21px;
+  @extend %poppins-semibold;
+  font-size: 24px;
+  color: $color-text-dark;
+  margin-bottom: 12px
 }
 
 p {
@@ -186,6 +190,20 @@ p {
   font-size: 21px;
   line-height: 31px;
   margin-bottom: 24px;
+}
+
+ul {
+  margin-bottom: 24px;
+}
+
+li {
+  @extend %roboto-regular;
+  color: $color-text-dark;
+  font-size: 16px;
+  line-height: 1.6;
+  > ul {
+    margin-top: 10px;
+  }
 }
 
 .text-center {
@@ -335,5 +353,93 @@ small {
   p,
   .btn-primary {
     font-size: 16px;
+  }
+}
+
+/* Base table styles */
+.table {
+  --at-table-bg: transparent;
+  --at-table-accent-bg: transparent;
+  --at-table-striped-color: #212529;
+  --at-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --at-table-active-color: #212529;
+  --at-table-active-bg: rgba(0, 0, 0, 0.1);
+  --at-table-hover-color: #212529;
+  --at-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  // border-color: #dee2e6;
+}
+
+/* Apply styles to table rows and cells */
+.table > :not(caption) > * > * {
+  padding: 0.5rem;
+  background-color: var(--at-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--at-table-accent-bg);
+  border: 1px solid #dee2e6;
+  font-size: 16px;
+}
+
+/* Table bordered styles */
+.table-bordered {
+  margin-bottom: 40px;
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: 1px 1px;
+}
+
+.table-bordered > :not(caption) > * > * {
+  border-width: 1px 1px;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .table-responsive-xxl {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
   }
 }
