@@ -8,7 +8,7 @@
   min-height: 557px;
   &::before {
     content: '';
-    background: url('/appolloweb/images/featured-img.png') no-repeat;
+    background: url('/images/featured-img.png') no-repeat;
     background-position: bottom center;
     width: 100%;
     min-height: 740px;
@@ -42,7 +42,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background: url('/appolloweb/images/shape-right.png') no-repeat;
+    background: url('/images/shape-right.png') no-repeat;
     width: 157px;
     height: 658px;
   }
