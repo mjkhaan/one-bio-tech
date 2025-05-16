@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +9,7 @@ header {
   background-color: transparent;
   transition: background-color 0.3s ease;
   padding: 36px 7.5rem 0;
+  z-index: 3;
   @media (max-width: 767.98px) {
     padding: 0 1rem;
   }
@@ -38,6 +40,9 @@ header {
           &:hover {
             color: $color-primary;
           }
+        }
+        &.active a {
+          color: $color-primary;
         }
       }
     }
