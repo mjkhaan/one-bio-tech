@@ -2,9 +2,9 @@
 @import '../../styles/grid';
 
 footer {
-  padding: 110px 7.5rem 110px;
+  padding: 55px 7.5rem 80px;
   @media (max-width: 767.98px) {
-    padding: 110px 3rem 110px;
+    padding: 55px 3rem 80px;
     display: flex;
     justify-content: center;
   }

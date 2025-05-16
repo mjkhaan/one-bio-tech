@@ -9,7 +9,7 @@
     .side-section {
         display: flex;
         align-items: center;
-        gap: 85px;
+        gap: 40px;
         > div {
             margin-top: 30px;
             > div {
@@ -52,13 +52,14 @@
 @media (max-width: 992px) {
     .main-section {
         width: 100%;
-        margin: 100px auto 0px auto;
+        margin: 30px auto 0px auto;
         .side-section {
             display: flex;
             gap: 0px;
             flex-direction: column-reverse;
             .form-section {
                 margin-bottom: 40px;
+                min-width: 100%;
             }
             > div {
                 width: 100%;
