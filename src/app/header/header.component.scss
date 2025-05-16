@@ -29,6 +29,12 @@ header {
         gap: 32px;
       }
       li {
+        &.active {
+          a {
+            color: $color-primary;
+            font-weight: bold
+          }
+        }
         a {
           @extend %font-primary;
           font-size: 21px;

@@ -1,0 +1,68 @@
+@import '../../../styles/variables';
+@import '../../../styles/grid';
+.main-section {
+    width: 768px;
+    margin: 100px auto 80px auto;
+    h1 {
+        text-align: center;
+    }
+    .side-section {
+        display: flex;
+        align-items: center;
+        gap: 85px;
+        > div {
+            margin-top: 30px;
+            > div {
+                border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+                &:last-child {
+                    border-bottom: 0px;
+                }
+                p {
+                    color: #fff;
+                    margin: 0px;
+                }
+            }
+        }
+        > .form-section {
+            min-width: 450px;
+            background-color: #fff;
+            padding: 30px;
+            margin-top: 20px;
+            > div {
+                border-bottom: none;
+                padding: 0px;
+                margin-bottom: 15px;
+                label {
+                    font-weight: 400;
+                }
+                input, textarea {
+                    border: 1px solid #000;
+                    outline: none;
+                    border-radius: 0px;
+                    padding: 5px 5px;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .main-section {
+        width: 100%;
+        margin: 100px auto 0px auto;
+        .side-section {
+            display: flex;
+            gap: 0px;
+            flex-direction: column-reverse;
+            .form-section {
+                margin-bottom: 40px;
+            }
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}
