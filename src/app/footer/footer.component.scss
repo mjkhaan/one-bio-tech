@@ -2,38 +2,29 @@
 @import '../../styles/grid';
 
 footer {
-  padding: 80px 5% 30px;
-  background: transparent linear-gradient(240deg, #864E98 0%, #593890 100%) 0% 0% no-repeat padding-box;
-  opacity: 1;
+  padding: 110px 7.5rem 110px;
+  @media (max-width: 767.98px) {
+    padding: 110px 3rem 110px;
+    display: flex;
+    justify-content: center;
+  }
   .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid $color-white;
-    padding-bottom: 96px;
-    .footer-logo {
+    .footer-content {
       > a {
         display: block;
       }
     }
-    .footer-content {
-      max-width: 474px;
-      h4 {
-        color: $color-white;
-        text-align: center;
-      }
-      p {
-        font-size: 18px;
-        line-height: 23px;
-        color: $color-white;
-      }
-    }
   }
   .copyright-text {
-    color: $color-light;
+    @extend %font-primary;
+    color: $color-white;
     font-size: 18px;
+    line-height: 28px;
     text-align: center;
-    margin-top: 16px;
+    margin: 0;
   }
 }
 

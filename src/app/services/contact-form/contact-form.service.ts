@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ContactFormService {
-  private apiUrl: string = 'https://octdailyapi.octdaily.com/appollo/api/ContactRequest';
+  private apiUrl: string = 'https://apollotec.org/api/api/ContactRequest';
  
   constructor(private http: HttpClient) {}
  

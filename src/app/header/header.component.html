@@ -1,16 +1,22 @@
 <header  [class.scrolled]="isScrolled">
   <div class="logo">
     <a [routerLink]="['/']">
-      <img src="/images/logo.svg" alt="Apollo Technologies" loading="lazy">
+      <img src="/images/logo.svg" alt="OneBioTech" loading="lazy">
     </a>
   </div>
   <nav class="hide-lg hide-xl" [class.scrolled]="isScrolled">
     <ul>
       <li [ngClass]="{'active': currentRoute === '/'}">
-        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/']">HOME</a>
       </li>
-      <li [ngClass]="{'active': currentRoute === '/contact'}">
-        <a [routerLink]="['/contact']">Contact</a>
+      <li [ngClass]="{'active': currentRoute === '/#'}">
+        <a [routerLink]="['/#']">WHY US</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/#'}">
+        <a [routerLink]="['/#']">OUR PRODUCTS</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/#'}">
+        <a [routerLink]="['/#']">CONTACT US</a>
       </li>
     </ul>
   </nav>
@@ -27,10 +33,16 @@
     </div>
     <ul>
       <li [ngClass]="{'active': currentRoute === '/'}">
-        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/']">HOME</a>
       </li>
-      <li [ngClass]="{'active': currentRoute === '/contact'}">
-        <a [routerLink]="['/contact']">Contact</a>
+      <li [ngClass]="{'active': currentRoute === '/#'}">
+        <a [routerLink]="['/#']">WHY US</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/#'}">
+        <a [routerLink]="['/#']">OUR PRODUCTS</a>
+      </li>
+      <li [ngClass]="{'active': currentRoute === '/#'}">
+        <a [routerLink]="['/#']">CONTACT US</a>
       </li>
     </ul>
   </div>

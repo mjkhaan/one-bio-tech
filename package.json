@@ -1,5 +1,5 @@
 {
-  "name": "apollo-technologies",
+  "name": "one-bio-tech",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:apollo-technologies": "node dist/apollo-technologies/server/server.mjs"
+    "serve:ssr:one-bio-tech": "node dist/one-bio-tech/server/server.mjs"
   },
   "private": true,
   "dependencies": {

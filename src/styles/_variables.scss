@@ -1,6 +1,21 @@
-$color-primary: #593890;
-$color-secondary: #864E98;
-$color-text-dark: #1C0740;
-$color-text-light: #B2B0B0;
+$color-primary: #E3FF65;
+$color-secondary: #152644;
+$color-text-dark: #000;
+$color-text-light: #FFF;
 $color-light: #F1F2EB;
 $color-white: #ffffff;
+
+%font-primary {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+%font-secondary {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+  
