@@ -30,19 +30,22 @@
             background-color: #fff;
             padding: 30px;
             margin-top: 20px;
-            > div {
-                border-bottom: none;
-                padding: 0px;
-                margin-bottom: 15px;
-                label {
-                    font-weight: 400;
-                }
-                input, textarea {
-                    border: 1px solid #000;
-                    outline: none;
-                    border-radius: 0px;
-                    padding: 5px 5px;
-                    color: #000;
+            form {
+                > div {
+                    border-bottom: none;
+                    padding: 0px;
+                    margin-bottom: 15px;
+                    position: relative;
+                    label {
+                        font-weight: 400;
+                    }
+                    input, textarea {
+                        border: 1px solid #000;
+                        outline: none;
+                        border-radius: 0px;
+                        padding: 5px 5px;
+                        color: #000;
+                    }
                 }
             }
         }

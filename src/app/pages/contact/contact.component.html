@@ -20,19 +20,45 @@
                     </div>
                 </div>
                 <div class="form-section">
-                    <div>
-                        <label>Name</label>
-                        <input>
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input>
-                    </div>
-                    <div>
-                        <label>Message</label>
-                        <textarea rows="10"></textarea>
-                    </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div>
+                            <label>Name</label>
+                            <input id="name" formControlName="name" >
+                            @if (name.invalid && name.touched) {
+                                <div>
+                                    @if(name.errors?.['required']) {
+                                        <small>Name is required.</small>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input id="email" formControlName="email">
+                            @if(email.invalid && email.touched) {
+                                <div>
+                                    @if(email.errors?.['required']) {
+                                        <small>Email is required.</small>
+                                    }
+                                    @if(email.errors?.['email']) {
+                                        <small>Email must be valid.</small>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div>
+                            <label>Message</label>
+                            <textarea rows="10" id="message" formControlName="message"></textarea>
+                            @if(message.invalid && message.touched) {
+                                <div>
+                                    @if(message.errors?.['required']) {
+                                        <small>Message is required.</small>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <button class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
