@@ -123,8 +123,8 @@ h6 {
 
 p {
   color: $color-text-dark;
-  font-size: 21px;
-  line-height: 31px;
+  font-size: 18px;
+  line-height: 28px;
   margin-bottom: 24px;
 }
 
@@ -339,9 +339,8 @@ input, textarea {
 small {
   color: red;
   font-size: 12px;
-  margin: 3px 10px;
-  font-family: "proxima-nova-regular";
   position: absolute;
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {

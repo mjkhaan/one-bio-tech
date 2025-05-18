@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="main-section">
+        <div class="form-wrapper">
+            <h1><strong>Get in touch.</strong></h1>
+            <div class="side-section">
+                <div>
+                    <div>
+                        <h4>Snail Mail</h4>
+                        <p>2054 Vista Parkway Emerald View # 400 </p>
+                        <p>West Palm Beach, Florida 33411</p>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support"&#64;"onebiotech.com </p>
+                    </div>
+                    <div>
+                        <h4>Phone Support:</h4>
+                        <p>Mon to Sat: 9AM to 5PM</p>
+                        <p>+88-675-128763 </p>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div>
+                            <label>Name</label>
+                            <input id="name" formControlName="name" >
+                            @if (name.invalid && name.touched) {
+                                <div>
+                                    @if(name.errors?.['required']) {
+                                        <small>Name is required.</small>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input id="email" formControlName="email">
+                            @if(email.invalid && email.touched) {
+                                <div>
+                                    @if(email.errors?.['required']) {
+                                        <small>Email is required.</small>
+                                    }
+                                    @if(email.errors?.['email']) {
+                                        <small>Email must be valid.</small>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div>
+                            <label>Message</label>
+                            <textarea rows="10" id="message" formControlName="message"></textarea>
+                            @if(message.invalid && message.touched) {
+                                <div>
+                                    @if(message.errors?.['required']) {
+                                        <small>Message is required.</small>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <button class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light">
+        <h2 class="text-center">
+            <strong>Expanding Access. 
+                <br>Empowering Outcomes.
+            </strong>
+        </h2>
+        <p>OneBioTech is committed to making regenerative medicine a standard of care—not a specialty. By equipping clinicians with biologic solutions and expert support, we help them expand treatment options for patients with complex, chronic, or non-healing wounds.</p>
+    </div>
+</div>

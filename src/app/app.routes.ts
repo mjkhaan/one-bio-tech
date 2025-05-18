@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { WhyUsComponent } from './pages/why-us/why-us.component';
 import { OurProductsComponent } from './pages/our-products/our-products.component';
 
@@ -21,5 +22,9 @@ export const routes: Routes = [
     pathMatch: 'full',
     component: OurProductsComponent,
     title: 'OneBioTech | Our Products'
-  }
+  },
+  { path: 'contact-us',
+    pathMatch: 'full',
+    component: ContactComponent,
+    title: 'OneBioTech | Contact US'}
 ];
